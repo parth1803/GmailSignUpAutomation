@@ -1,0 +1,103 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite thread-count="1" verbose="1" name="Cx-HelpDesk" annotations="JDK" parallel="true">
+    <test name="Test_Master_Employee" enabled="true">
+        <classes>
+            <class name="testcase.CxHelpDesk_LoginPageTests">
+                <methods>
+                    <!--                    <include name="verifyAgentLogin"/>-->
+                    <!--                    <include name="verifyUserLogin"/>-->
+                    <!--                    <include name="verifyAdminLogin"/>-->
+                    <include name="validateLogin"/>
+                </methods>
+            </class>
+            <class name="testcase.CxHelpDesk_Master_EmployeePageTests">
+                <methods>
+                    <include name="createEmployee"/>
+                    <include name="editEmployee"/>
+                    <include name="deleteEmployee"/>
+                    <!-- <include name="importEmployee"/>!-->
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Test_Master_Group" enabled="true">
+        <classes>
+            <class name="testcase.CxHelpDesk_Master_GroupPageTests">
+                <methods>
+                    <include name="createGroup"/>
+                    <include name="editGroup"/>
+                    <include name="deleteGroup"/>
+                    <!-- <include name="importGroup"/>!-->
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Test_Master_Site" enabled="true">
+        <classes>
+            <class name="testcase.CxHelpDesk_Master_SitePageTests">
+                <methods>
+                    <include name="createSite"/>
+                    <include name="editSite" />
+                    <include name="deleteSite"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Test_Master_Customer" enabled="true">
+        <classes>
+            <class name="testcase.CxHelpDesk_Master_CustomerPageTests">
+                <methods>
+                    <include name="createCustomer"/>
+                    <include name="editCustomer"/>
+                    <include name="deleteCustomer"/>
+                    <!-- <include name="importCustomer"/>!-->
+                 </methods>
+             </class>
+         </classes>
+     </test>
+
+     <test name="Test_Master_CustomerUser" enabled="true">
+         <classes>
+             <class name="testcase.CxHelpDesk_Master_CustomerUserPageTests">
+                 <methods>
+                     <include name="createCustomerUser"/>
+                     <include name="editCustomerUser"/>
+                     <include name="deleteCustomerUser"/>
+                     <!-- <include name="importCustomerUser"/> !-->
+                 </methods>
+             </class>
+         </classes>
+     </test>
+     <test name="Test_Customer_CreateTicket" enabled="true">
+         <classes>
+             <class name="testcase.CxHelpDesk_CreateTicketPageTests">
+                 <methods>
+                     <include name="createReturnTicket"/>
+                 </methods>
+             </class>
+         </classes>
+     </test>
+    <test name="Test_Actions_SelfAssign" enabled="true">
+        <classes>
+            <class name="testcase.CxHelpDesk_AOT_SelfAssignPageTests">
+                <methods>
+                    <include name="SelfAssign"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Test_Actions_EditTicket" enabled="true">
+        <classes>
+            <class name="testcase.Cx_HelpDesk_page_AOT_EditTicketPageTests">
+                <methods>
+                    <include name="EditTicket"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+ </suite>
